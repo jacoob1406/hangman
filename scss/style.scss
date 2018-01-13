@@ -1,0 +1,150 @@
+$col1: #ffd9e6;
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    // font-family: 'Fira Mono', monospace;
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 2px;
+}
+
+
+body{
+    background: #000000;
+    color: $col1;
+    max-width: 100%;
+}
+
+
+.container{
+    padding-bottom: 10px;
+    max-width: 1600px;
+
+    .heading{
+        width: 100%;
+        text-align: center;
+        h1{
+            padding: 15px;
+            font-size: 3em;
+            text-decoration: underline;
+            letter-spacing: 3px;
+        }
+        h2{
+            padding: 10px 0 20px 0;
+            letter-spacing: 10px;
+        }
+        h3{
+            padding-bottom: 40px;
+        }
+
+    }
+    .game-container{
+        display: flex;
+        width: 100%;
+        padding-top: 10px;
+        justify-content: space-around;
+
+        .letters{
+            width: 50%;
+            text-align: center;
+            padding-left: 50px;
+
+            .row{
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+            }
+
+
+            .let{
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                border: 2px solid  $col1;
+                margin: 5px;
+                cursor: pointer;
+                font-size: 2em;
+                @include border-radius(10%);
+
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+
+            h1{
+                width: 100%;
+                text-align: center;
+                padding-bottom: 10px;
+                padding-top: 20px;
+            }
+            p{
+                padding-bottom: 10px;
+            }
+            button{
+                margin-top: 10px;
+                width: 50%;
+                @include border-radius(10%);
+                font-size: 2em;
+                border: 0;
+                cursor: pointer;
+
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .hangman-img{
+            width: 50%;
+            text-align: center;
+            img{
+                width: 80%;
+                height: auto;
+                border: 1px solid $col1;
+                @include border-radius(10%);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .container{
+        .game-container{
+            .letters{
+                width: 40%;
+            }
+
+            .hangman-img{
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .container{
+        .game-container{
+            flex-direction: column;
+            .letters{
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .hangman-img{
+                width: 100%;
+                padding-top: 15px;
+            }
+        }
+    }
+}
