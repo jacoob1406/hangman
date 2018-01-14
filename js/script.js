@@ -66,7 +66,7 @@ const codewords = [
         description: "an American rock band from Agoura Hills, California, formed in 1996"
     },
     {
-        word: "Mahatma Gandhi",
+        word: "Lorde",
         category: "Singer",
         description: "A New Zealand singer, songwriter, and record producer "
     },
