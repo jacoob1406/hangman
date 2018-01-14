@@ -243,14 +243,16 @@ function guess(x) {
     }
 
     if (word === word2) {
-        const audio = new Audio("media/victory.mp3");
-        audio.play();
+        const audioW = new Audio("media/victory.mp3");
+        audioW.play();
         document.getElementById('image').src = "media/img10.jpg";
         document.getElementById('allletters').innerHTML = '<h1>WELL DONE!</h1><p>The word was:<br>' + word + '</p><p>Description:<br> ' + desc + '</p> <button id="again">PLAY AGAIN</button>';
         document.getElementById('again').onclick = function () {
             location.reload();
         };
     } else if (mistakes === 9) {
+		const audioL = new Audio("media/loss.mp3");
+        audioL.play();
         document.getElementById('allletters').innerHTML = '<h1>BAD LUCK</h1> <p>The word was:<br> ' + word + '</p><p>Description: <br>' + desc + '</p> <button id="again">PLAY AGAIN</button>';
 
         word1 = word;
