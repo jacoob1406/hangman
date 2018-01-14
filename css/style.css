@@ -1,3 +1,10 @@
+.container .game-container, .container .game-container .letters .row {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
+
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +36,6 @@ body {
     .container .heading h3 {
       padding-bottom: 40px; }
   .container .game-container {
-    display: flex;
     width: 100%;
     padding-top: 10px;
     justify-content: space-around; }
@@ -39,7 +45,6 @@ body {
       padding-left: 50px; }
       .container .game-container .letters .row {
         width: 100%;
-        display: flex;
         justify-content: space-around; }
       .container .game-container .letters .let {
         width: 50px;

@@ -7,6 +7,14 @@ $col1: #ffd9e6;
     border-radius: $radius;
 }
 
+%flexbox {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
 
 *{
     margin: 0;
@@ -14,7 +22,6 @@ $col1: #ffd9e6;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    // font-family: 'Fira Mono', monospace;
     font-family: 'Share Tech Mono', monospace;
     letter-spacing: 2px;
 }
@@ -50,7 +57,7 @@ body{
 
     }
     .game-container{
-        display: flex;
+        @extend %flexbox;
         width: 100%;
         padding-top: 10px;
         justify-content: space-around;
@@ -62,7 +69,7 @@ body{
 
             .row{
                 width: 100%;
-                display: flex;
+                @extend %flexbox;
                 justify-content: space-around;
             }
 
