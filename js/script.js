@@ -19,6 +19,81 @@ const codewords = [
         word: "Diun",
         category: "Book",
         description: "1965 science fiction novel by American author Frank Herbert"
+    },
+    {
+        word: "Albert Einstein",
+        category: "Famous person",
+        description: "Born in 1879 German theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics"
+    },
+    {
+        word: "Always forgive your enemies",
+        category: "Qoute",
+        description: "Famous quote by Irish poet Oscar Wilde"
+    },
+    {
+        word: "Manchester United",
+        category: "Football club",
+        description: "The most successful English team of all time"
+    },
+    {
+        word: "Apple",
+        category: "Company",
+        description: "An American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, computer software, and online services"
+    },
+    {
+        word: "Stephen King",
+        category: "Famous person",
+        description: "An American author of horror, supernatural fiction, suspense, science fiction, and fantasy"
+    },
+    {
+        word: "Pele",
+        category: "Famous person",
+        description: "Brazilian retired professional footballer who played as a forward. He is widely regarded as the greatest football player of all time"
+    },
+    {
+        word: "Million Dollar Baby",
+        category: "Movie",
+        description: "2004 American sports drama film directed, co-produced, and scored by Clint Eastwood"
+    },
+    {
+        word: "The Beatles",
+        category: "Music band",
+        description: "English rock band formed in Liverpool in 1960. With members John Lennon, Paul McCartney, George Harrison and Ringo Starr, they became widely regarded as the foremost and most influential act of the rock era"
+    },
+    {
+        word: "Linkin Park",
+        category: "Music band",
+        description: "an American rock band from Agoura Hills, California, formed in 1996"
+    },
+    {
+        word: "Mahatma Gandhi",
+        category: "Singer",
+        description: "A New Zealand singer, songwriter, and record producer "
+    },
+    {
+        word: "Zara",
+        category: "Company",
+        description: "retailer based in Arteixo, Galicia, founded in 1975 by Amancio Ortega and Rosalía Mera"
+    },
+    {
+        word: "Beijing",
+        category: "City",
+        description: "the capital of the People's Republic of China and the world's second most populous city proper and most populous capital city"
+    },
+    {
+        word: "Lucca",
+        category: "City",
+        description: " a city and comune in Tuscany, Central Italy, on the Serchio, in a fertile plain near the Tyrrhenian Sea"
+    },
+    {
+        word: "Lost",
+        category: "TV Series",
+        description: "an American drama television series that originally aired on the American Broadcasting Company (ABC) from September 22, 2004, to May 23, 2010, over six seasons, comprising a total of 121 episodes"
+    },
+    {
+        word: "Jim Jarmusch",
+        category: "Famous person",
+        description: "An American film director, screenwriter, actor, producer, editor, and composer"
     }
 ];
 let word = "";
@@ -133,9 +208,6 @@ window.onload = function () {
 
 };
 
-
-
-
 String.prototype.putLetter = function (place, letter) {
     if (place > this.length - 1)
         return this.toString();
@@ -155,15 +227,15 @@ function guess(x) {
 
     if (ok) {
         let guessed = "let" + x;
-        document.getElementById(guessed).style.background = "#003300";
-        document.getElementById(guessed).style.color = "#00C000";
-        document.getElementById(guessed).style.border = "3px solid #00C000";
+        document.getElementById(guessed).style.background = "#003307";
+        document.getElementById(guessed).style.color = "#00e522";
+        document.getElementById(guessed).style.border = "3px solid #00e522";
         document.getElementById(guessed).style.cursor = "default";
     } else {
         const guessed = "let" + x;
-        document.getElementById(guessed).style.background = "#330000";
-        document.getElementById(guessed).style.color = "#C00000";
-        document.getElementById(guessed).style.border = "3px solid #C00000";
+        document.getElementById(guessed).style.background = "#470000";
+        document.getElementById(guessed).style.color = "#ff0f0f";
+        document.getElementById(guessed).style.border = "3px solid #ff0f0f";
         document.getElementById(guessed).style.cursor = "default";
         document.getElementById(guessed).setAttribute("onclick", ";");
         mistakes++;
@@ -171,8 +243,10 @@ function guess(x) {
     }
 
     if (word === word2) {
+        const audio = new Audio("media/victory.mp3");
+        audio.play();
         document.getElementById('image').src = "media/img10.jpg";
-        document.getElementById('allletters').innerHTML = '<h1>CONGRATULATIONS</h1><p>The word was:<br>' + word + '</p><p>Description:<br> ' + desc + '</p> <button id="again">PLAY AGAIN</button>';
+        document.getElementById('allletters').innerHTML = '<h1>WELL DONE!</h1><p>The word was:<br>' + word + '</p><p>Description:<br> ' + desc + '</p> <button id="again">PLAY AGAIN</button>';
         document.getElementById('again').onclick = function () {
             location.reload();
         };

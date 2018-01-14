@@ -135,10 +135,45 @@ body{
 @media only screen and (max-width: 768px){
     .container{
         .game-container{
+            .letters{
+                width: 35%;
+                padding: 0 0 0 10px;
+                text-align: center;
+            }
+
+            .hangman-img{
+                width: 65%;
+                margin: 0;  
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .container{
+        .heading{
+            width: 100%;
+            text-align: center;
+            h1{
+                padding: 15px 0 10px 0;
+            }
+            h2{
+                padding: 10px 0 20px 0;
+                letter-spacing: 10px;
+            }
+            h3{
+                padding-bottom: 5px;
+            }
+
+        }
+        .game-container{
             flex-direction: column;
             .letters{
                 width: 100%;
-                padding-left: 0;
+                padding: 0;
+                .let{
+                    margin: 3px;
+                }
             }
 
             .hangman-img{

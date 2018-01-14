@@ -92,11 +92,31 @@ body {
   .container .game-container .hangman-img {
     width: 60%; } }
 @media only screen and (max-width: 768px) {
+  .container .game-container .letters {
+    width: 35%;
+    padding: 0 0 0 10px;
+    text-align: center; }
+  .container .game-container .hangman-img {
+    width: 65%;
+    margin: 0; } }
+@media only screen and (max-width: 640px) {
+  .container .heading {
+    width: 100%;
+    text-align: center; }
+    .container .heading h1 {
+      padding: 15px 0 10px 0; }
+    .container .heading h2 {
+      padding: 10px 0 20px 0;
+      letter-spacing: 10px; }
+    .container .heading h3 {
+      padding-bottom: 5px; }
   .container .game-container {
     flex-direction: column; }
     .container .game-container .letters {
       width: 100%;
-      padding-left: 0; }
+      padding: 0; }
+      .container .game-container .letters .let {
+        margin: 3px; }
     .container .game-container .hangman-img {
       width: 100%;
       padding-top: 15px; } }
