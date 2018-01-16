@@ -24,6 +24,12 @@ $col1: #ffd9e6;
     margin-right: auto;
     font-family: 'Share Tech Mono', monospace;
     letter-spacing: 2px;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;  
+    user-select: none;
 }
 
 
