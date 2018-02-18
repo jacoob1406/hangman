@@ -27,7 +27,7 @@ const codewords = [
     },
     {
         word: "Always forgive your enemies",
-        category: "Qoute",
+        category: "Quote",
         description: "Famous quote by Irish poet Oscar Wilde"
     },
     {
